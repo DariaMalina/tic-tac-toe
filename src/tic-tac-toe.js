@@ -26,22 +26,20 @@ class TicTacToe {
     getWinner() {
         if (this.playingField[0][0] === this.playingField[1][1] && this.playingField[0][0] === this.playingField[2][2]) {
             return this.playingField[0][0]
-        }
-
-        if (this.playingField[0][2] === this.playingField[1][1] && this.playingField[0][2] === this.playingField[2][0]) {
+        } else if (this.playingField[0][2] === this.playingField[1][1] && this.playingField[0][2] === this.playingField[2][0]) {
             return this.playingField[0][2]
-        }
-
-        for (let i = 0; i < 3; i++) {
-            if (this.playingField[i][0] === this.playingField[i][1] && this.playingField[i][0] === this.playingField[i][2]) {
-                return this.playingField[i][0]
-            }
-        }
-
-        for (let i = 0; i < 3; i++) {
-            if (this.playingField[0][i] === this.playingField[1][i] && this.playingField[0][i] === this.playingField[2][i]) {
-                return this.playingField[0][i]
-            }
+        } else if (this.playingField[0][0] === this.playingField[0][1] && this.playingField[0][0] === this.playingField[0][2]) {
+            return this.playingField[0][0]
+        } else if (this.playingField[1][0] === this.playingField[1][1] && this.playingField[1][0] === this.playingField[1][2]) {
+            return this.playingField[1][0]
+        } else if (this.playingField[2][0] === this.playingField[2][1] && this.playingField[2][0] === this.playingField[2][2]) {
+            return this.playingField[2][0]
+        } else if (this.playingField[0][0] === this.playingField[1][0] && this.playingField[0][0] === this.playingField[2][0]) {
+            return this.playingField[0][0]
+        } else if (this.playingField[0][1] === this.playingField[1][1] && this.playingField[0][1] === this.playingField[2][1]) {
+            return this.playingField[0][1]
+        } else if (this.playingField[0][2] === this.playingField[1][2] && this.playingField[0][2] === this.playingField[2][2]) {
+            return this.playingField[0][2]
         }
         return null
     }
